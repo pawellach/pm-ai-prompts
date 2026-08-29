@@ -37,6 +37,9 @@ Ready-to-use skill files for Claude Code (`.claude/skills/`).
 | `atlassian-search-company-knowledge.md` | Search Confluence + Jira in parallel (requires Atlassian plugin) |
 | `atlassian-spec-to-backlog.md` | Confluence spec → Jira Epic + tickets (requires Atlassian plugin) |
 | `atlassian-triage-issue.md` | Bug triage — find duplicates, create Jira issues (requires Atlassian plugin) |
+| `jira-sync/` | Automatic Jira lifecycle — transitions (In Progress → In Test → Done) + auto-comments on task completion. Self-configuring setup wizard. (requires Atlassian plugin) |
+| `jira-intake/` | Analyst ticket intake — reads Jira + Confluence, writes analytical comment with dev scope, reassigns to developer. Batch mode: up to 5 tickets in parallel. (requires Atlassian plugin) |
+| `requirements-analyst/` | Requirements-to-dev-spec pipeline: Gate A→D, stable REQ-*/Q-* IDs, traceability, email draft for stakeholder Q&A, DOCX/PDF/Confluence ingestion. (requires Atlassian plugin + docx/pdf skills) |
 
 ## How to use
 
