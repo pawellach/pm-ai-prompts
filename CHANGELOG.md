@@ -5,6 +5,9 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — SemVer.
 
 ## [Unreleased]
 
+### Added
+- `skills/requirements-analyst/SKILL.md` — Claude Code skill for Analyst / PO / PMO: drives a project from raw requirements to developer-ready specification. Pipeline SOURCE → REQUIREMENTS → Q&A → PROCESSES → UX → DEV SPEC with Gate A/B/C/D. Stable REQ-*/Q-* IDs, full traceability chain, conflict detection. Dual output for open questions: machine-readable `questions-register.md` + ready-to-send `questions-email-draft.md` grouped by addressee and topic. Supports DOCX, PDF, MD, EML, Confluence, Jira as source formats. Gate A posts a Jira summary comment; Gate C triggers dev handoff.
+
 ## [1.1.0] - 2026-08-27
 
 ### Added
