@@ -5,6 +5,16 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — SemVer.
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-09-13
+
+### Added
+- `career/career-profile-builder.md` — flagship multi-phase prompt: guides any user through full career profile build (inventory → cross-check → interview → Master Profile → CV → LinkedIn → job fit → CV tailoring). Career Advocate approach: Strengthen, Don't Fabricate. FACT / REASONABLE ENHANCEMENT / ESTIMATION confidence levels.
+- `career/job-fit-analyzer.md` — paste CV + job description → match score (1–10), requirements table (✅⚠️❌), gaps, talking points, salary estimate, honest red flags. Works as standalone prompt in any LLM.
+- `career/cv-tailoring-engine.md` — paste base CV + job description → tailored CV with per-change log, keyword extraction, fair assessment of what tailoring can and cannot fix.
+
+### Changed
+- `README.md` — added Career AI Tools section, updated repo description to reflect multi-domain scope (PM + Career + AI Policy roadmap)
+
 ## [1.2.0] - 2026-08-29
 
 ### Added

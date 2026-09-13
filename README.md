@@ -1,6 +1,18 @@
 # pm-ai-prompts
 
-Enterprise-grade AI prompts and Claude Code skills for Project Managers, Business Analysts, Delivery Leads and Transformation Teams.
+Enterprise-grade AI prompts and Claude Code skills for Project Managers, Business Analysts, Delivery Leads, Transformation Teams — and anyone building a career in the age of AI.
+
+## Career AI Tools (`career/`)
+
+End-to-end toolkit for knowledge workers who want AI-assisted career building.
+
+| File | Use case |
+|---|---|
+| `career-profile-builder.md` | Full career profile from scratch — inventory → interview → Master Profile → CV → LinkedIn → job fit |
+| `job-fit-analyzer.md` | Paste CV + job description → match score, gap table, talking points |
+| `cv-tailoring-engine.md` | Tailor any CV to a specific role — keywords, emphasis, summary rewrite |
+
+> These prompts work as standalone system prompts (ChatGPT, Claude, Gemini) or as Claude Code skills.
 
 ## Prompts (`prompts/`)
 
