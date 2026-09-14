@@ -5,6 +5,25 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — SemVer.
 
 ## [Unreleased]
 
+## [1.4.0] - 2026-09-14
+
+### Added
+- `prompts/roadmap-planner.md` — product/program roadmap prompt: Now/Next/Later framework, RICE prioritization, timeline and Gantt output, dependency mapping
+- `prompts/okr-kpi-builder.md` — OKR Coach: 5-step workflow, blocks vanity metrics and tasks-as-KRs, requires numeric baseline before writing any Key Result
+- `prompts/project-kickoff-facilitator.md` — Team Charter builder: RACI matrix, Kickoff Agenda (60 or 90 min), post-kickoff action list, Ways of Working section
+- `prompts/decision-log-writer.md` — ADR-style decision records: options comparison table, rationale, consequences, stakeholder communication draft, Related Decisions index
+- `prompts/release-notes-writer.md` — three-audience release notes from raw PR/commit/ticket input: Format A (technical), Format B (product), Format C (executive)
+- `prompts/raid-board-automator.md` — continuous RAID board maintenance from meeting notes and status updates; escalation flags, Risk→Issue reclassification, append-only update log
+- `prompts/vendor-evaluation.md` — structured vendor scorecard: functional + commercial + strategic criteria, weighted scoring, recommendation memo, negotiation checklist
+- `skills/github-pr-to-release-notes/SKILL.md` — read merged PRs via `gh` CLI, categorize by label, generate 3-format release notes; handles milestone, date range, and tag comparison scopes
+- `skills/linear-sprint-dashboard/SKILL.md` — pull active Linear cycle via MCP, compute health metrics (completion rate, blockers, stale, unassigned), produce standup/Slack/exec dashboard
+- `skills/release-manager/SKILL.md` — end-to-end release coordination: pre-release gate checklist, go/no-go decision, deployment tracking, rollback plan, post-release verification, hotfix protocol
+- `examples/` directory with worked input→output pairs for 3 prompts (risk-register-analyst, user-story-writer, roadmap-planner)
+
+### Changed
+- `prompts/sharepoint_ai_writer_prompt.md` → `prompts/sharepoint-ai-writer.md` (kebab-case rename for consistency)
+- `README.md` — added 7 new prompts, 3 new skills, Examples section, updated skill table
+
 ## [1.3.0] - 2026-09-13
 
 ### Added
