@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pm-ai-prompts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:      #0D0F12;
+    --surface: #161A20;
+    --accent:  #4FFFB0;
+    --text:    #E8EAF0;
+    --muted:   #6B7280;
+    --border:  #232830;
+    --tag-bg:  rgba(79,255,176,0.08);
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+  nav {
+    border-bottom: 1px solid var(--border);
+    padding: 18px 0;
+  }
+  nav .container { display: flex; justify-content: space-between; align-items: center; }
+  .nav-brand { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--accent); font-weight: 500; }
+  .nav-links { display: flex; gap: 24px; }
+  .nav-links a { color: var(--muted); font-size: 14px; }
+
+  .hero { padding: 80px 0 60px; border-bottom: 1px solid var(--border); }
+  .hero-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; color: var(--accent);
+    letter-spacing: 1px; text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  h1 { font-size: clamp(26px, 5vw, 40px); font-weight: 600; line-height: 1.2; margin-bottom: 20px; }
+  .hero-sub { font-size: 18px; color: var(--muted); max-width: 540px; margin-bottom: 36px; }
+  .cta-group { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--accent); color: #0D0F12;
+    font-weight: 600; padding: 10px 22px; border-radius: 6px; font-size: 14px;
+  }
+  .btn-secondary {
+    background: transparent; color: var(--text);
+    border: 1px solid var(--border); padding: 10px 22px; border-radius: 6px; font-size: 14px;
+  }
+
+  /* Stats row */
+  .stats { display: flex; gap: 32px; padding: 40px 0; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+  .stat { display: flex; flex-direction: column; gap: 4px; }
+  .stat-num { font-family: 'JetBrains Mono', monospace; font-size: 28px; color: var(--accent); font-weight: 500; }
+  .stat-label { font-size: 13px; color: var(--muted); }
+
+  /* Categories */
+  .categories { padding: 60px 0; border-bottom: 1px solid var(--border); }
+  .section-label {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 32px;
+  }
+  .category { margin-bottom: 40px; }
+  .category-header {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 16px;
+  }
+  .category-icon {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px; color: var(--accent);
+  }
+  .category-title { font-size: 16px; font-weight: 600; }
+  .category-desc { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
+  .prompt-grid {
+    display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .prompt-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; color: var(--accent);
+    background: var(--tag-bg);
+    border: 1px solid rgba(79,255,176,0.15);
+    padding: 4px 10px; border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  /* Who it's for */
+  .audience { padding: 60px 0; border-bottom: 1px solid var(--border); }
+  .audience h2 { font-size: 22px; margin-bottom: 24px; }
+  .audience-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;
+  }
+  .audience-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; padding: 20px;
+  }
+  .audience-card h3 { font-size: 14px; margin-bottom: 8px; }
+  .audience-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+  /* Usage */
+  .usage { padding: 60px 0; border-bottom: 1px solid var(--border); }
+  .usage h2 { font-size: 22px; margin-bottom: 24px; }
+  .usage-step { display: flex; gap: 16px; margin-bottom: 14px; }
+  .step-num {
+    font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent);
+    background: rgba(79,255,176,0.1); border-radius: 4px; padding: 2px 8px;
+    height: fit-content; white-space: nowrap; margin-top: 2px;
+  }
+  .step-text { font-size: 15px; color: var(--muted); }
+  .step-text code {
+    font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text);
+    background: var(--surface); padding: 1px 6px; border-radius: 3px;
+  }
+
+  /* Related */
+  .related { padding: 48px 0; }
+  .related h2 { font-size: 16px; color: var(--muted); margin-bottom: 20px; }
+  .related-links { display: flex; gap: 20px; flex-wrap: wrap; }
+  .related-link {
+    font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--accent);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 8px 14px; border-radius: 6px;
+  }
+
+  footer {
+    border-top: 1px solid var(--border); padding: 24px 0;
+    font-size: 13px; color: var(--muted); display: flex; justify-content: center;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <span class="nav-brand">pm-ai-prompts</span>
+    <div class="nav-links">
+      <a href="https://github.com/pawellach/pm-ai-prompts">GitHub</a>
+      <a href="https://github.com/pawellach/portfolio-control-agent">portfolio-control-agent</a>
+      <a href="https://medium.com/@pawellach">Writing</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-label">Open Source · AI Prompts · PM Tooling</div>
+      <h1>Stop writing the same<br>PM artifacts from scratch.</h1>
+      <p class="hero-sub">Production-ready prompts and Claude Code skills for PMs, BAs, and Delivery Leads. Works with any AI — ChatGPT, Claude, Gemini — or as drop-in skills for Claude Code.</p>
+      <div class="cta-group">
+        <a class="btn-primary" href="https://github.com/pawellach/pm-ai-prompts">Browse on GitHub</a>
+        <a class="btn-secondary" href="https://github.com/pawellach/pm-ai-prompts/tree/main/prompts">View all prompts</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-num">20+</span>
+        <span class="stat-label">PM prompts</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">10+</span>
+        <span class="stat-label">Claude Code skills</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">3</span>
+        <span class="stat-label">career AI tools</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">MIT</span>
+        <span class="stat-label">license</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="categories">
+    <div class="container">
+      <div class="section-label">What's inside</div>
+
+      <div class="category">
+        <div class="category-header">
+          <span class="category-icon">▤</span>
+          <span class="category-title">PM Prompts</span>
+        </div>
+        <p class="category-desc">Drop into any AI chat. Covers the full PM lifecycle — from requirements to retrospectives.</p>
+        <div class="prompt-grid">
+          <span class="prompt-tag">user-story-writer</span>
+          <span class="prompt-tag">sprint-retrospective-facilitator</span>
+          <span class="prompt-tag">risk-register-analyst</span>
+          <span class="prompt-tag">executive-status-report</span>
+          <span class="prompt-tag">brd-writer</span>
+          <span class="prompt-tag">uat-scenario-generator</span>
+          <span class="prompt-tag">roadmap-planner</span>
+          <span class="prompt-tag">okr-kpi-builder</span>
+          <span class="prompt-tag">change-impact-assessment</span>
+          <span class="prompt-tag">decision-log-writer</span>
+          <span class="prompt-tag">release-notes-writer</span>
+          <span class="prompt-tag">raid-board-automator</span>
+          <span class="prompt-tag">vendor-evaluation</span>
+          <span class="prompt-tag">stakeholder-comms-planner</span>
+          <span class="prompt-tag">project-kickoff-facilitator</span>
+        </div>
+      </div>
+
+      <div class="category">
+        <div class="category-header">
+          <span class="category-icon">◎</span>
+          <span class="category-title">Claude Code Skills</span>
+        </div>
+        <p class="category-desc">Drop into <code style="font-family:JetBrains Mono,monospace;font-size:13px;background:#161A20;padding:1px 5px;border-radius:3px">.claude/skills/</code>. Automate your Jira lifecycle, triage bugs, generate sprint dashboards — without leaving the terminal.</p>
+        <div class="prompt-grid">
+          <span class="prompt-tag">jira-sync</span>
+          <span class="prompt-tag">jira-intake</span>
+          <span class="prompt-tag">atlassian-triage-issue</span>
+          <span class="prompt-tag">atlassian-spec-to-backlog</span>
+          <span class="prompt-tag">atlassian-sprint-dashboard</span>
+          <span class="prompt-tag">atlassian-status-report</span>
+          <span class="prompt-tag">release-manager</span>
+          <span class="prompt-tag">linear-sprint-dashboard</span>
+          <span class="prompt-tag">humanizer</span>
+        </div>
+      </div>
+
+      <div class="category">
+        <div class="category-header">
+          <span class="category-icon">◑</span>
+          <span class="category-title">Career AI Tools</span>
+        </div>
+        <p class="category-desc">End-to-end toolkit for PM career building — from blank profile to tailored CV.</p>
+        <div class="prompt-grid">
+          <span class="prompt-tag">career-profile-builder</span>
+          <span class="prompt-tag">job-fit-analyzer</span>
+          <span class="prompt-tag">cv-tailoring-engine</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="audience">
+    <div class="container">
+      <h2>Built for</h2>
+      <div class="audience-grid">
+        <div class="audience-card">
+          <h3>Project Managers</h3>
+          <p>Faster artifacts, better status reports, structured retrospectives. Less time writing, more time deciding.</p>
+        </div>
+        <div class="audience-card">
+          <h3>Business Analysts</h3>
+          <p>BRDs, gap analysis, UAT scenarios, decision logs. From meeting notes to structured documents in minutes.</p>
+        </div>
+        <div class="audience-card">
+          <h3>Delivery Leads</h3>
+          <p>Risk registers, RAID boards, executive summaries. Keep stakeholders informed without the copy-paste.</p>
+        </div>
+        <div class="audience-card">
+          <h3>Claude Code users</h3>
+          <p>Skills that wire directly into your Jira/Confluence workflow — triage, intake, lifecycle automation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="usage">
+    <div class="container">
+      <h2>How to use</h2>
+      <div class="usage-step">
+        <span class="step-num">Prompts</span>
+        <span class="step-text">Copy any <code>.md</code> from <code>prompts/</code> and paste as a system prompt in ChatGPT, Claude, or Gemini. Then give it your context.</span>
+      </div>
+      <div class="usage-step">
+        <span class="step-num">Skills</span>
+        <span class="step-text">Copy any file from <code>skills/</code> to your <code>~/.claude/skills/</code> directory. Invoke with <code>/skill-name</code> in Claude Code.</span>
+      </div>
+      <div class="usage-step">
+        <span class="step-num">Career</span>
+        <span class="step-text">Start with <code>career-profile-builder.md</code> — it guides you through building a Master Profile, then hands off to tailoring and job fit.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="related">
+    <div class="container">
+      <h2>Related projects</h2>
+      <div class="related-links">
+        <a class="related-link" href="https://github.com/pawellach/portfolio-control-agent">portfolio-control-agent</a>
+        <a class="related-link" href="https://github.com/pawellach/local-ai-environment">local-ai-environment</a>
+        <a class="related-link" href="https://medium.com/@pawellach">medium.com/@pawellach</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>MIT License · <a href="https://github.com/pawellach/pm-ai-prompts">github.com/pawellach/pm-ai-prompts</a></span>
+</footer>
+
+</body>
+</html>
