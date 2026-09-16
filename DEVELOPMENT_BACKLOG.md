@@ -3,25 +3,27 @@
 Wszystkie planowane rozszerzenia repozytorium, pogrupowane według ścieżki kariery i priorytetu.
 Aktualizować po każdej sesji roboczej.
 
-Last updated: 2026-09-14
+Last updated: 2026-09-16
 
 ---
 
-## Wersja aktualna: v1.4.0
+## Wersja aktualna: v1.5.0
 
-Zrobione: 7 promptów (roadmap-planner, okr-kpi-builder, project-kickoff-facilitator, decision-log-writer,
-release-notes-writer, raid-board-automator, vendor-evaluation) + 3 skille (github-pr-to-release-notes,
-linear-sprint-dashboard, release-manager) + examples/ (3 pary) + rename sharepoint.
+Zrobione v1.5.0: 4 prompty (interview-prep-coach, ai-readiness-assessment, business-case-writer,
+technical-discovery-facilitator) + 2 skille (confluence-page-from-template, azure-devops-work-item-triage)
++ examples/ dla wszystkich 21 promptów (18 nowych par).
 
 ---
 
-## Mid-term — v1.5.0
+## Mid-term — v1.6.0
 
 | Co | Typ | Priorytet |
 |---|---|---|
-| `skills/confluence-page-from-template/` | Skill Claude Code | Wysoki |
-| `skills/azure-devops-work-item-triage/` | Skill Claude Code | Wysoki |
-| Wypełnij `examples/` dla wszystkich istniejących promptów (14 promptów × input+output) | Dokumentacja | Średni |
+| `prompts/consulting-proposal-writer.md` | Prompt | Wysoki |
+| `prompts/sow-generator.md` | Prompt | Wysoki |
+| `prompts/change-management-planner.md` | Prompt | Wysoki |
+| `skills/consulting-client-status-pack/` | Skill Claude Code | Wysoki |
+| `prompts/executive-presentation-builder.md` | Prompt | Wysoki |
 | README — sekcja "How to use with Claude Code" z video/gif | Dokumentacja | Niski |
 
 ---
@@ -143,7 +145,7 @@ Skille Claude Code:
 ### DevOps & Engineering (dla FDM/technical roles)
 | Narzędzie | Dlaczego nie używam | Potencjalna integracja |
 |---|---|---|
-| Azure DevOps | Tylko archiwum (Symfonia) | ADO MCP → skill w v1.5.0 |
+| Azure DevOps | Tylko archiwum (Symfonia) | ✅ `skills/azure-devops-work-item-triage` — wydane v1.5.0 |
 | GitLab | Nie w stacku | GitLab MCP |
 | Buildkite / CircleCI | Nie w stacku | CI API → release-manager extension |
 
@@ -151,19 +153,21 @@ Skille Claude Code:
 
 ## Kolejność realizacji (sugerowana)
 
-### Sprint 1 (v1.5.0) — ~4h pracy
-1. `confluence-page-from-template` skill
-2. `azure-devops-work-item-triage` skill
-3. `examples/` dla wszystkich 14 istniejących promptów
-4. `career/interview-prep-coach.md`
-5. `prompts/ai-readiness-assessment.md`
+### ✅ Sprint 1 (v1.5.0) — DONE 2026-09-16
+1. ✅ `confluence-page-from-template` skill
+2. ✅ `azure-devops-work-item-triage` skill
+3. ✅ `examples/` dla wszystkich 21 promptów
+4. ✅ `career/interview-prep-coach.md`
+5. ✅ `prompts/ai-readiness-assessment.md`
+6. ✅ `prompts/business-case-writer.md`
+7. ✅ `prompts/technical-discovery-facilitator.md`
 
 ### Sprint 2 (v1.6.0) — ~4h pracy
-1. `prompts/business-case-writer.md`
-2. `prompts/consulting-proposal-writer.md`
-3. `prompts/technical-discovery-facilitator.md`
+1. `prompts/consulting-proposal-writer.md`
+2. `prompts/sow-generator.md`
+3. `prompts/change-management-planner.md`
 4. `skills/consulting-client-status-pack/`
-5. `prompts/change-management-planner.md`
+5. `prompts/executive-presentation-builder.md`
 
 ### Sprint 3 (v1.7.0) — ~3h pracy
 1. Pozostałe prompty ścieżki B, C, D
