@@ -173,3 +173,20 @@ Skille Claude Code:
 1. Pozostałe prompty ścieżki B, C, D
 2. Skille enterprise PM
 3. HubSpot MCP prototype (jeśli L2Studio uruchomione)
+
+### Sprint 4 (v1.8.0) — Living Project Intelligence — ~4h pracy
+1. `skills/sprint-close-synthesizer/` — koniec sprintu: pull zamkniętych ticketów z Jiry → velocity, przeniesienia, seed planowania następnego; dopełnienie jira-sync
+2. `skills/stakeholder-update-generator/` — Jira + commit log → gotowy update per audience (exec/team/client); różny ton, różna głębokość
+3. `prompts/post-project-review.md` — project closure: lessons learned, outcomes vs. plan, materiał na case study
+4. `prompts/ai-product-spec.md` — spec dla AI feature: wymagania na model, kryteria eval, fallback behavior, bias considerations
+
+### Sprint 5 (v1.9.0) — jira-intake v2: Internal Records — ~5h pracy (upgrade istniejącego skilla)
+Upgrade `skills/jira-intake/` o warstwę state management — bezstanowość to obecna główna słabość skilla.
+
+**Co dodać:**
+1. **Historia lokalna** — `~/.claude/skills/jira-intake/history/<TICKET>.md` z pełną analizą, datą, assignee, complexity. Powtórne uruchomienie na tym samym tickecie wykrywa poprzednią analizę
+2. **Registry** — `registry.json`: lista przetworzonych ticketów (date, assignee, complexity, epic). Ładowany przy każdym intake jako kontekst
+3. **Workload awareness** — przed przypisaniem sprawdza registry: ile otwartych intake ma dany dev w bieżącym tygodniu
+4. **Cross-ticket intelligence** — przy nowym tickecie: kolizje w tym samym komponencie/epiku/assignee z otwartymi ryzykami
+5. **Stats view** — `/jira-intake stats`: wzorce complexity per komponent, rozkład assignee, recurring open questions
+6. **Bridge do requirements-analyst** — gdy complexity=Complex: "Chcesz pełną analizę wymagań? (`/requirements-analyst <TICKET>`)"
