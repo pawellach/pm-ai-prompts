@@ -5,6 +5,20 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — SemVer.
 
 ## [Unreleased]
 
+## [1.5.0] - 2026-09-16
+
+### Added
+- `skills/confluence-page-from-template/` — Claude Code skill: interactive page creation from 7 built-in templates (Meeting Notes, Project Kickoff, Feature Spec, ADR, Retrospective, Onboarding Guide, Incident Report); AI-fills content from minimal inputs, previews before publish; self-configuring setup wizard
+- `skills/azure-devops-work-item-triage/` — Claude Code skill: analytical triage of ADO work items; reads linked items and wiki for context, writes scoped comment with complexity estimate, transitions state, reassigns to dev; batch mode (up to 5 items in parallel); PAT-based auth via settings.local.json
+- `career/interview-prep-coach.md` — company research + role-specific Q&A generation + STAR coaching per answer; separate versions for PM / AI Product / Salesforce roles; paths B+D
+- `prompts/ai-readiness-assessment.md` — AI maturity audit: people, processes, data, technology axes → maturity matrix + prioritized roadmap + quick wins; paths C+A
+- `prompts/business-case-writer.md` — opportunity to investment justification: problem framing, solution options, ROI model, risk register, executive ask; path A
+- `prompts/technical-discovery-facilitator.md` — structured discovery facilitator: system mapping, data flows, pain points, integration gaps; FDM day 1–5 protocol; path D
+- `examples/` — worked input→output pairs for all 21 prompts (18 new pairs added to cover all prompts without examples)
+
+### Changed
+- `DEVELOPMENT_BACKLOG.md` — updated to v1.5.0 current; Sprint 2 (v1.6.0) definition moved up
+
 ## [1.4.0] - 2026-09-14
 
 ### Added
