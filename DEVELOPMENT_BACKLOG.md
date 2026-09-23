@@ -162,7 +162,7 @@ Skille Claude Code:
 6. ✅ `prompts/business-case-writer.md`
 7. ✅ `prompts/technical-discovery-facilitator.md`
 
-### Sprint 2 (v1.6.0) — ~4h pracy
+### ✅ Sprint 2 (v1.6.0) — DONE 2026-09-23
 1. `prompts/consulting-proposal-writer.md`
 2. `prompts/sow-generator.md`
 3. `prompts/change-management-planner.md`
