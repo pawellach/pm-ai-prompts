@@ -5,6 +5,19 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — SemVer.
 
 ## [Unreleased]
 
+## [1.6.0] - 2026-09-23
+
+### Added
+- `prompts/consulting-proposal-writer.md` — client brief → full consulting proposal: SCR framing, 5-step guided workflow, all proposal sections (executive summary, scope, team, timeline, investment, why us, next steps); language-adaptive
+- `prompts/sow-generator.md` — approved proposal → signed-ready Statement of Work: 16 standard clauses including deliverables & acceptance criteria, change management, IP assignment, confidentiality, termination; gap-detection before drafting
+- `prompts/change-management-planner.md` — OCM plan using ADKAR framework: affected group mapping, ADKAR gap assessment per group, communication plan, training plan, resistance management table, 90-day roadmap; explicit Desire-vs-Awareness diagnosis to prevent over-communication
+- `skills/consulting-client-status-pack/` — Claude Code skill: weekly client status pack generator; reads live Jira data via Atlassian MCP + meeting notes paste → polished HTML or Markdown status pack (summary, completed, in-progress, decisions, risks, needs-from-client, upcoming); works without MCP via text input
+- `prompts/executive-presentation-builder.md` — C-suite / board presentation builder: Situation–Complication–Resolution storyline, slide-by-slide outline with per-slide talking points and evidence prompts, Q&A preparation kit with killer question; optimized for 10–45 min slots
+
+### Changed
+- `README.md` — added 4 new prompts and 1 new skill to tables
+- `DEVELOPMENT_BACKLOG.md` — v1.6.0 sprint marked complete
+
 ## [1.5.0] - 2026-09-16
 
 ### Added

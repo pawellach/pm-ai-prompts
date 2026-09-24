@@ -3,7 +3,7 @@
 Wszystkie planowane rozszerzenia repozytorium, pogrupowane według ścieżki kariery i priorytetu.
 Aktualizować po każdej sesji roboczej.
 
-Last updated: 2026-09-16
+Last updated: 2026-09-23
 
 ---
 
@@ -162,17 +162,19 @@ Skille Claude Code:
 6. ✅ `prompts/business-case-writer.md`
 7. ✅ `prompts/technical-discovery-facilitator.md`
 
-### Sprint 2 (v1.6.0) — ~4h pracy
+### ✅ Sprint 2 (v1.6.0) — DONE 2026-09-23
 1. `prompts/consulting-proposal-writer.md`
 2. `prompts/sow-generator.md`
 3. `prompts/change-management-planner.md`
 4. `skills/consulting-client-status-pack/`
 5. `prompts/executive-presentation-builder.md`
 
-### Sprint 3 (v1.7.0) — ~3h pracy
-1. Pozostałe prompty ścieżki B, C, D
-2. Skille enterprise PM
-3. HubSpot MCP prototype (jeśli L2Studio uruchomione)
+### Sprint 3 (v1.7.0) — ~3h pracy — zaplanowany na 2026-09-30 12:00
+1. `career/salary-negotiation-script.md` — od oferty → strategia negocjacji, counter-offer, BATNA, walk-away (ścieżka B)
+2. `career/linkedin-outreach-writer.md` — cold/warm outreach do rekruterów; ton który nie brzmi jak spam (ścieżka B)
+3. `prompts/ai-use-case-prioritizer.md` — lista życzeń klienta → priorytetyzacja AI use case'ów: wartość vs effort, dane, ryzyko (ścieżka C)
+4. `prompts/client-value-narrative-builder.md` — praca techniczna → ROI dla executive; "3 systemy → czas decyzji −40%" (ścieżka D)
+5. `skills/confluence-program-dashboard/` — health dashboard programu z Jiry + Confluence: poziom portfolio, nie sprint (ścieżka A)
 
 ### Sprint 4 (v1.8.0) — Living Project Intelligence — ~4h pracy
 1. `skills/sprint-close-synthesizer/` — koniec sprintu: pull zamkniętych ticketów z Jiry → velocity, przeniesienia, seed planowania następnego; dopełnienie jira-sync

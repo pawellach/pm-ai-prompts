@@ -39,6 +39,10 @@ End-to-end toolkit for knowledge workers who want AI-assisted career building.
 | `release-notes-writer.md` | Transforms commit lists / PR titles into 3 audience formats (technical, product, executive) |
 | `raid-board-automator.md` | Continuous RAID board updates from meeting notes and status updates |
 | `vendor-evaluation.md` | Structured vendor scorecard — functional + commercial + strategic fit, recommendation memo |
+| `consulting-proposal-writer.md` | Client brief → full consulting proposal: executive summary, approach, scope, timeline, team, investment |
+| `sow-generator.md` | Approved proposal → signed-ready Statement of Work: deliverables, acceptance criteria, payment schedule, IP, termination |
+| `change-management-planner.md` | OCM plan using ADKAR: affected group analysis, ADKAR gap assessment, resistance management, training plan, 90-day roadmap |
+| `executive-presentation-builder.md` | Storyline (SCR) + slide outline + per-slide talking points + Q&A kit for C-suite and board presentations |
 
 ## Claude Code skills (`skills/`)
 
@@ -62,6 +66,7 @@ Ready-to-use skill files for Claude Code (`.claude/skills/`).
 | `github-pr-to-release-notes/` | Read merged PRs via `gh` CLI → categorize by label → generate 3-format release notes |
 | `linear-sprint-dashboard/` | Pull active Linear cycle → compute health metrics → produce standup/Slack/exec dashboard |
 | `release-manager/` | End-to-end release coordination: pre-release gate, go/no-go, deployment tracking, rollback plan, retrospective |
+| `consulting-client-status-pack/` | Weekly client status pack from Jira + meeting notes → polished HTML/MD report: summary, progress, decisions, risks, needs from client (requires Atlassian plugin for live Jira data) |
 
 ## Examples (`examples/`)
 
