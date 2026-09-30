@@ -11,6 +11,8 @@ End-to-end toolkit for knowledge workers who want AI-assisted career building.
 | `career-profile-builder.md` | Full career profile from scratch — inventory → interview → Master Profile → CV → LinkedIn → job fit |
 | `job-fit-analyzer.md` | Paste CV + job description → match score, gap table, talking points |
 | `cv-tailoring-engine.md` | Tailor any CV to a specific role — keywords, emphasis, summary rewrite |
+| `salary-negotiation-script.md` | Job offer → negotiation strategy: anchor, counter-offer scripts, BATNA, walk-away point, 5 scenario scripts |
+| `linkedin-outreach-writer.md` | Cold/warm LinkedIn outreach — human, specific, anti-spam; variants + follow-up for recruiter/HM/mentor/peer |
 
 > These prompts work as standalone system prompts (ChatGPT, Claude, Gemini) or as Claude Code skills.
 
@@ -43,6 +45,8 @@ End-to-end toolkit for knowledge workers who want AI-assisted career building.
 | `sow-generator.md` | Approved proposal → signed-ready Statement of Work: deliverables, acceptance criteria, payment schedule, IP, termination |
 | `change-management-planner.md` | OCM plan using ADKAR: affected group analysis, ADKAR gap assessment, resistance management, training plan, 90-day roadmap |
 | `executive-presentation-builder.md` | Storyline (SCR) + slide outline + per-slide talking points + Q&A kit for C-suite and board presentations |
+| `ai-use-case-prioritizer.md` | AI wishlist → prioritized matrix: value vs. effort, regulatory risk, data dependency, build/buy, Top 3 POC recommendations |
+| `client-value-narrative-builder.md` | Technical work → executive ROI narrative: problem→solution→impact→next step; formats: 1-pager, email, slide bullets |
 
 ## Claude Code skills (`skills/`)
 
@@ -67,6 +71,7 @@ Ready-to-use skill files for Claude Code (`.claude/skills/`).
 | `linear-sprint-dashboard/` | Pull active Linear cycle → compute health metrics → produce standup/Slack/exec dashboard |
 | `release-manager/` | End-to-end release coordination: pre-release gate, go/no-go, deployment tracking, rollback plan, retrospective |
 | `consulting-client-status-pack/` | Weekly client status pack from Jira + meeting notes → polished HTML/MD report: summary, progress, decisions, risks, needs from client (requires Atlassian plugin for live Jira data) |
+| `confluence-program-dashboard/` | Portfolio-level program health dashboard from Jira epics + Confluence → RAG per initiative, risks, decisions needed, executive summary (requires Atlassian plugin for live data) |
 
 ## Examples (`examples/`)
 
