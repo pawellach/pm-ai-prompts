@@ -169,12 +169,12 @@ Skille Claude Code:
 4. `skills/consulting-client-status-pack/`
 5. `prompts/executive-presentation-builder.md`
 
-### Sprint 3 (v1.7.0) — ~3h pracy — zaplanowany na 2026-09-30 12:00
-1. `career/salary-negotiation-script.md` — od oferty → strategia negocjacji, counter-offer, BATNA, walk-away (ścieżka B)
-2. `career/linkedin-outreach-writer.md` — cold/warm outreach do rekruterów; ton który nie brzmi jak spam (ścieżka B)
-3. `prompts/ai-use-case-prioritizer.md` — lista życzeń klienta → priorytetyzacja AI use case'ów: wartość vs effort, dane, ryzyko (ścieżka C)
-4. `prompts/client-value-narrative-builder.md` — praca techniczna → ROI dla executive; "3 systemy → czas decyzji −40%" (ścieżka D)
-5. `skills/confluence-program-dashboard/` — health dashboard programu z Jiry + Confluence: poziom portfolio, nie sprint (ścieżka A)
+### ✅ Sprint 3 (v1.7.0) — DONE 2026-09-30
+1. ✅ `career/salary-negotiation-script.md` — od oferty → strategia negocjacji, counter-offer, BATNA, walk-away (ścieżka B)
+2. ✅ `career/linkedin-outreach-writer.md` — cold/warm outreach do rekruterów; ton który nie brzmi jak spam (ścieżka B)
+3. ✅ `prompts/ai-use-case-prioritizer.md` — lista życzeń klienta → priorytetyzacja AI use case'ów: wartość vs effort, dane, ryzyko (ścieżka C)
+4. ✅ `prompts/client-value-narrative-builder.md` — praca techniczna → ROI dla executive; "3 systemy → czas decyzji −40%" (ścieżka D)
+5. ✅ `skills/confluence-program-dashboard/` — health dashboard programu z Jiry + Confluence: poziom portfolio, nie sprint (ścieżka A)
 
 ### Sprint 4 (v1.8.0) — Living Project Intelligence — ~4h pracy
 1. `skills/sprint-close-synthesizer/` — koniec sprintu: pull zamkniętych ticketów z Jiry → velocity, przeniesienia, seed planowania następnego; dopełnienie jira-sync

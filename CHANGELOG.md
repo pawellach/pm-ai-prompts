@@ -5,6 +5,19 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — SemVer.
 
 ## [Unreleased]
 
+## [1.7.0] - 2026-09-30
+
+### Added
+- `career/salary-negotiation-script.md` — job offer → full negotiation strategy: anchor analysis, counter-offer with exact scripts, BATNA map, walk-away point definition, 5 scenario scripts (verbal counter, written counter, push-back response, deadline pressure, acceptance/decline); path B
+- `career/linkedin-outreach-writer.md` — cold/warm LinkedIn outreach writer: recipient/goal analysis, hook identification, anti-spam check, variants A+B + follow-up; covers recruiter / hiring manager / mentor / peer; length-calibrated by message type; path B
+- `prompts/ai-use-case-prioritizer.md` — AI use case prioritization framework: business value vs. implementation effort scoring, regulatory risk and data dependency assessment, build/buy classification, 2×2 quadrant placement (Quick Wins / Strategic Bets / Fill-ins / Avoid), Top 3 POC recommendations with success criteria; path C
+- `prompts/client-value-narrative-builder.md` — technical work → executive ROI narrative: business impact excavation (process delta, financial calibration, risk reduction), value model table, red flag review (strips technical metrics without business translation); output formats: 1-pager, executive email, slide bullets; path D
+- `skills/confluence-program-dashboard/` — Claude Code skill: portfolio-level program health dashboard from Jira epics + Confluence context; RAG scoring (Green/Amber/Red) per initiative with consistent rules, Program Health Table, Top 3 Risks, Decisions Needed, Executive Summary; works without MCP via text input; path A
+
+### Changed
+- `README.md` — added 2 career prompts, 2 consulting/FDM prompts, 1 skill to tables
+- `DEVELOPMENT_BACKLOG.md` — v1.7.0 sprint marked complete
+
 ## [1.6.0] - 2026-09-23
 
 ### Added
