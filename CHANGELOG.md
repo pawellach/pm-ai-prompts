@@ -5,6 +5,18 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — SemVer.
 
 ## [Unreleased]
 
+## [1.8.0] - 2026-10-07
+
+### Added
+- `skills/sprint-close-synthesizer/` — Claude Code skill: sprint closure synthesizer; reads closed Jira sprint via Atlassian MCP → velocity + completion rate + carryover analysis + unplanned work ratio; produces (a) stakeholder-ready sprint close report with RAG status, (b) planning seed document with carry-forward candidates, capacity adjustments, and open questions for next planning session; complements `jira-sync` at sprint level; path A
+- `skills/stakeholder-update-generator/` — Claude Code skill: audience-calibrated project update generator; reads Jira sprint data and/or raw `git log`; generates up to 3 audience versions: exec/sponsor (≤150 words, RAG badge, single ask), team/dev (bulleted, Jira keys, honest blockers), client/external (professional narrative, no internal jargon, needs-from-client section); quality checks ensure versions are consistent and risks are not suppressed; paths A/C/D
+- `prompts/post-project-review.md` — structured project closure facilitation: guided workflow through outcomes vs. plan (scope, timeline, budget, quality), lessons-learned register with root-cause depth (8–15 specific, actionable lessons), Stop-Start-Continue section, and anonymized case study seed ready for portfolio or proposal appendix; avoids generic advice in favour of specific, conditioned recommendations; paths A/C
+- `prompts/ai-product-spec.md` — production-quality AI feature specification: precise task definition (input/output/scope boundary/refusal conditions), model requirements (capability, performance, deployment constraints, cost), evaluation criteria (automated metrics with pass thresholds, human evaluation rubric, production monitoring), fallback behavior for 5 failure modes, bias and fairness assessment, human-in-the-loop design; paths A/C/D
+
+### Changed
+- `README.md` — added 2 new prompts (post-project-review, ai-product-spec) and 2 new skills to tables
+- `DEVELOPMENT_BACKLOG.md` — v1.8.0 sprint marked complete; v1.9.0 scope defined
+
 ## [1.6.0] - 2026-09-23
 
 ### Added

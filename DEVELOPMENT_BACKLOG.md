@@ -176,11 +176,11 @@ Skille Claude Code:
 4. `prompts/client-value-narrative-builder.md` — praca techniczna → ROI dla executive; "3 systemy → czas decyzji −40%" (ścieżka D)
 5. `skills/confluence-program-dashboard/` — health dashboard programu z Jiry + Confluence: poziom portfolio, nie sprint (ścieżka A)
 
-### Sprint 4 (v1.8.0) — Living Project Intelligence — ~4h pracy
-1. `skills/sprint-close-synthesizer/` — koniec sprintu: pull zamkniętych ticketów z Jiry → velocity, przeniesienia, seed planowania następnego; dopełnienie jira-sync
-2. `skills/stakeholder-update-generator/` — Jira + commit log → gotowy update per audience (exec/team/client); różny ton, różna głębokość
-3. `prompts/post-project-review.md` — project closure: lessons learned, outcomes vs. plan, materiał na case study
-4. `prompts/ai-product-spec.md` — spec dla AI feature: wymagania na model, kryteria eval, fallback behavior, bias considerations
+### ✅ Sprint 4 (v1.8.0) — Living Project Intelligence — DONE 2026-10-07
+1. ✅ `skills/sprint-close-synthesizer/` — koniec sprintu: pull zamkniętych ticketów z Jiry → velocity, przeniesienia, seed planowania następnego; dopełnienie jira-sync
+2. ✅ `skills/stakeholder-update-generator/` — Jira + commit log → gotowy update per audience (exec/team/client); różny ton, różna głębokość
+3. ✅ `prompts/post-project-review.md` — project closure: lessons learned, outcomes vs. plan, materiał na case study
+4. ✅ `prompts/ai-product-spec.md` — spec dla AI feature: wymagania na model, kryteria eval, fallback behavior, bias considerations
 
 ### Sprint 5 (v1.9.0) — jira-intake v2: Internal Records — ~5h pracy (upgrade istniejącego skilla)
 Upgrade `skills/jira-intake/` o warstwę state management — bezstanowość to obecna główna słabość skilla.
