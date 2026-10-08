@@ -176,19 +176,83 @@ Skille Claude Code:
 4. `prompts/client-value-narrative-builder.md` — praca techniczna → ROI dla executive; "3 systemy → czas decyzji −40%" (ścieżka D)
 5. `skills/confluence-program-dashboard/` — health dashboard programu z Jiry + Confluence: poziom portfolio, nie sprint (ścieżka A)
 
-### Sprint 4 (v1.8.0) — Living Project Intelligence — ~4h pracy
-1. `skills/sprint-close-synthesizer/` — koniec sprintu: pull zamkniętych ticketów z Jiry → velocity, przeniesienia, seed planowania następnego; dopełnienie jira-sync
-2. `skills/stakeholder-update-generator/` — Jira + commit log → gotowy update per audience (exec/team/client); różny ton, różna głębokość
-3. `prompts/post-project-review.md` — project closure: lessons learned, outcomes vs. plan, materiał na case study
-4. `prompts/ai-product-spec.md` — spec dla AI feature: wymagania na model, kryteria eval, fallback behavior, bias considerations
+### ✅ Sprint 4 (v1.8.0) — Living Project Intelligence — DONE 2026-10-07
+1. ✅ `skills/sprint-close-synthesizer/` — koniec sprintu: pull zamkniętych ticketów z Jiry → velocity, przeniesienia, seed planowania następnego; dopełnienie jira-sync
+2. ✅ `skills/stakeholder-update-generator/` — Jira + commit log → gotowy update per audience (exec/team/client); różny ton, różna głębokość
+3. ✅ `prompts/post-project-review.md` — project closure: lessons learned, outcomes vs. plan, materiał na case study
+4. ✅ `prompts/ai-product-spec.md` — spec dla AI feature: wymagania na model, kryteria eval, fallback behavior, bias considerations
 
-### Sprint 5 (v1.9.0) — jira-intake v2: Internal Records — ~5h pracy (upgrade istniejącego skilla)
+### ✅ Sprint 5 (v1.9.0) — jira-intake v2: Internal Records — DONE 2026-10-08
 Upgrade `skills/jira-intake/` o warstwę state management — bezstanowość to obecna główna słabość skilla.
 
-**Co dodać:**
-1. **Historia lokalna** — `~/.claude/skills/jira-intake/history/<TICKET>.md` z pełną analizą, datą, assignee, complexity. Powtórne uruchomienie na tym samym tickecie wykrywa poprzednią analizę
-2. **Registry** — `registry.json`: lista przetworzonych ticketów (date, assignee, complexity, epic). Ładowany przy każdym intake jako kontekst
-3. **Workload awareness** — przed przypisaniem sprawdza registry: ile otwartych intake ma dany dev w bieżącym tygodniu
-4. **Cross-ticket intelligence** — przy nowym tickecie: kolizje w tym samym komponencie/epiku/assignee z otwartymi ryzykami
-5. **Stats view** — `/jira-intake stats`: wzorce complexity per komponent, rozkład assignee, recurring open questions
-6. **Bridge do requirements-analyst** — gdy complexity=Complex: "Chcesz pełną analizę wymagań? (`/requirements-analyst <TICKET>`)"
+**Co dodano:**
+1. ✅ **Historia lokalna** — `~/.claude/skills/jira-intake/history/<TICKET>.md` z pełną analizą, datą, assignee, complexity. Powtórne uruchomienie na tym samym tickecie wykrywa poprzednią analizę
+2. ✅ **Registry** — `registry.json`: lista przetworzonych ticketów (date, assignee, complexity, epic). Ładowany przy każdym intake jako kontekst
+3. ✅ **Workload awareness** — przed przypisaniem sprawdza registry: ile otwartych intake ma dany dev w bieżącym tygodniu
+4. ✅ **Cross-ticket intelligence** — przy nowym tickecie: kolizje w tym samym komponencie/epiku/assignee z otwartymi ryzykami
+5. ✅ **Stats view** — `/jira-intake stats`: wzorce complexity per komponent, rozkład assignee, recurring open questions
+6. ✅ **Bridge do requirements-analyst** — gdy complexity=Complex: "Chcesz pełną analizę wymagań? (`/requirements-analyst <TICKET>`)"
+
+---
+
+### Sprint 6 (v2.0) — Career Intelligence Layer — ~4h — zaplanowany na 2026-10-15 12:00
+
+Prompty dla ścieżki B (Job Search / etat) — narzędzia kariery oparte na danych rynkowych:
+
+1. `career/offer-evaluation-framework.md` — porównanie wielu ofert jednocześnie: total comp (base + bonus + equity + benefits), learning curve, brand value, remote/hybrid policy, exit options w perspektywie 2 lat; output: scoring matrix + rekomendacja + pytania negocjacyjne
+2. `career/salary-negotiation-script.md` — od oferty do zamknięcia: strategia counter-offeru, BATNA, walk-away point, konkretne zdania do wypowiedzenia lub napisania; uwzględnia różne kultury negocjacji (US vs PL vs remote-first)
+3. `career/linkedin-outreach-writer.md` — cold/warm wiadomości do rekruterów i hiring managerów; ton który nie brzmi jak spam; warianty: "szukam aktywnie", "otwarty na propozycje", "polecenie od znajomego"
+
+---
+
+### Sprint 7 (v2.1) — AI Governance & Policy — ~3h — zaplanowany na 2026-10-22 12:00
+
+Prompty dla AI Product Managera i Consultanta — odpowiedź na rosnące zapotrzebowanie na AI governance w enterprise:
+
+1. `prompts/ai-governance-framework.md` — risk assessment dla AI deploymentu w organizacji: GDPR compliance, bias evaluation, accountability matrix (kto odpowiada za co gdy model się myli), escalation path; output: gotowy framework do zatwierdzenia przez prawnika i zarząd
+2. `prompts/model-evaluation-scorecard.md` — structured evaluation LLM/AI vendors przed zakupem: capabilities (benchmark vs task-specific), costs (tokens, fine-tuning, infra), compliance (data residency, SOC2, GDPR), integration complexity; output: scorecard z rekomendacją i uzasadnieniem
+3. `skills/ai-audit-reporter/` — Claude Code skill: auto-raport AI usage w organizacji (jakie modele, przez kogo, do czego, jakie dane przetwarzają); dane z Jiry + confluence + git log; output: executive summary + risk matrix
+
+---
+
+### Sprint 8 (v2.2) — Consulting Operations — ~4h — zaplanowany na 2026-10-29 12:00
+
+Narzędzia dla consultanta zarządzającego projektami i scope'em:
+
+1. `prompts/project-status-escalation.md` — kiedy i jak eskalować: 3-poziomowa matryca (sponsor / steering / board), gotowe maile dla każdego poziomu, zasada "no surprise escalation", timing (kiedy najlepiej eskalować w tygodniu)
+2. `prompts/scope-creep-detector.md` — analiza scope vs SOW: flagowanie nieautoryzowanych zmian, klasyfikacja (gold-plating / misunderstanding / genuine new req), propozycja change order z ceną i uzasadnieniem
+3. `skills/requirements-analyst/` — **upgrade** istniejącego skilla: nowy tryb `gap-analysis` — porównuje istniejący system (dokumentacja/Confluence) z wymaganiami, identyfikuje luki i sprzeczności, output: gap register z priorytetami
+
+---
+
+### Sprint 9 (v2.3) — Data & Analytics PM — ~4h — zaplanowany na 2026-11-05 12:00
+
+Narzędzia dla PM-a pracującego z danymi i dashboardami:
+
+1. `prompts/data-product-spec.md` — spec na produkt danych: definicja (co to jest, kto używa), metryki jakości (freshness SLA, completeness, lineage), własność, tryb dostępu, downstream consumers; output: spec gotowy do review przez Data Engineering
+2. `prompts/kpi-dashboard-designer.md` — od pytania biznesowego do spec dashboardu: hierarchia KPI (north star → leading → lagging), wymagania na dane (źródło, granulacja, odświeżanie), układ widoku; output: brief dla BI developera
+3. `skills/confluence-program-dashboard/` — **upgrade** istniejącego skilla: dodaj ASCII/text wizualizację health metrics (progress bar, RAG traffic light, trend arrow ↑↓→) dla środowisk bez obsługi HTML/markdown rich
+
+---
+
+### Sprint 10 (v2.5) — Integration & Ecosystem — ~5h — zaplanowany na 2026-11-12 12:00
+
+Rozszerzenia istniejących skilli + nowe narzędzia dla architektów integracji:
+
+1. `prompts/api-product-spec.md` — spec API produktu: endpoints (REST/GraphQL), auth (OAuth2/API key/SAML), rate limiting, versioning strategy (semver vs date), developer experience checklist, breaking-change policy
+2. `skills/github-pr-to-release-notes/` — **upgrade**: wykrywanie breaking changes (semver major bump triggers), komunikat dla integratorów (migration guide stub), wariant "changelog entry" dla Keep a Changelog
+3. `skills/jira-sync/` — **upgrade**: integracja z `registry.json` z jira-intake; przy zamknięciu ticketu aktualizuje status w registry na "Done"; cross-skill awareness (jira-sync wie o historii intake)
+
+---
+
+### Sprint 11 (v3.0) — Multi-Agent PM Platform — ~10h — data TBD
+
+Przepisanie architektury — skille stają się spójnym systemem komunikującym się przez shared state:
+
+**Architektura:**
+- `~/.claude/skills/shared/registry.json` — globalny shared state: tickety (z jira-intake), releases (z jira-sync), sprinty (z sprint-close-synthesizer); każdy skill czyta i pisze
+- `skills/pm-ai-orchestrator/` — orkiestrator który na podstawie pytania użytkownika dobiera właściwy skill i przekazuje kontekst z registry; wejście: dowolne pytanie PM-a; wyjście: wywołanie odpowiedniego skilla z pre-loaded kontekstem
+- `skills/weekly-pm-briefing/` — poniedziałkowy briefing automatyczny (cron 9:00 Pn): sprint status z Jiry + kluczowe decyzje do podjęcia dziś + workload alert jeśli ktoś ma >3 otwarte + komunikacja do wysłania (Confluence/mail)
+
+**Dokumentacja systemu:**
+- `docs/pm-ai-system-overview.md` — jak używać całego zestawu jako spójnego systemu PM AI: diagram przepływu danych między skillami, use cases per rola (PM / Analyst / Consultant / FDM), quick-start dla nowego użytkownika
