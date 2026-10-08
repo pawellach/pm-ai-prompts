@@ -5,6 +5,14 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — SemVer.
 
 ## [Unreleased]
 
+## [1.9.0] - 2026-10-08
+
+### Added
+- `skills/jira-intake/` — v2 state management layer: local ticket history (`~/.claude/skills/jira-intake/history/<TICKET>.md`) with full analysis, date, assignee, complexity; re-run detection with previous context; registry.json for cross-session workload tracking; workload awareness (⚠️ warning when assignee has >3 open tickets in last 7 days); cross-ticket intelligence (flags related open tickets by epic/component/assignee); `/jira-intake stats` command with complexity breakdown, top assignees, top epics; bridge to requirements-analyst when complexity=Complex
+
+### Changed
+- `DEVELOPMENT_BACKLOG.md` — v1.9.0 marked done; roadmap 2.0→3.0 added (sprints 6–11: Career Intelligence, AI Governance, Consulting Operations, Data & Analytics PM, Integration & Ecosystem, Multi-Agent PM Platform)
+
 ## [1.8.0] - 2026-10-07
 
 ### Added
