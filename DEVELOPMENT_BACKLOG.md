@@ -195,7 +195,7 @@ Upgrade `skills/jira-intake/` o warstwę state management — bezstanowość to 
 
 ---
 
-### Sprint 6 (v2.0) — Career Intelligence Layer — ~4h — zaplanowany na 2026-10-15 12:00
+### ✅ Sprint 6 (v2.0) — Career Intelligence Layer — DONE 2026-10-15
 
 Prompty dla ścieżki B (Job Search / etat) — narzędzia kariery oparte na danych rynkowych:
 

@@ -5,6 +5,16 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — SemVer.
 
 ## [Unreleased]
 
+## [2.0.0] - 2026-10-15
+
+### Added
+- `career/offer-evaluation-framework.md` — multi-offer comparison engine: total comp (base + bonus + equity + benefits), equity reality check (conservative vs optimistic scenario), weighted scoring matrix across 8 dimensions (comp, learning curve, brand value, remote fit, stability, exit options, role clarity), negotiation leverage map, clear recommendation with leading indicators to watch; path B
+- `career/salary-negotiation-script.md` — end-to-end negotiation playbook from offer to close: BATNA and walk-away point definition, cultural context calibration (US / EU-PL / startup / enterprise), counter-offer strategy with exact target number, 5 response scenarios with verbatim scripts (email + phone/video), stall-tactic handling ("deadline pressure", "other candidates", "band is fixed"), post-negotiation close scripts; path B
+- `career/linkedin-outreach-writer.md` — cold and warm outreach writer for recruiters and hiring managers: 5 message variants (active search / passive / referred / open role / speculative), connection request and InMail versions, follow-up strategy with anti-"just checking in" rule, anti-pattern catalogue (template tells, desperation signals, vague openers), optional profile audit; path B
+
+### Changed
+- `DEVELOPMENT_BACKLOG.md` — Sprint 6 (v2.0) marked complete; Sprint 7 (v2.1) scope confirmed
+
 ## [1.9.0] - 2026-10-08
 
 ### Added
