@@ -5,6 +5,16 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — SemVer.
 
 ## [Unreleased]
 
+## [2.1.0] - 2026-10-22
+
+### Added
+- `prompts/ai-governance-framework.md` — enterprise AI governance framework builder: guided workflow through EU AI Act risk classification (Prohibited/High/Limited/Minimal), accountability matrix (System Owner / Risk Owner / DPO / Suspension Authority / Complaints Handler), GDPR & regulatory compliance checklist (lawful basis, DPIA, data subject rights, transparency, security), bias evaluation plan (pre-deployment demographic parity + disparate impact, post-deployment monitoring cadence), P1–P4 incident escalation path with 2h SLA for critical, ongoing governance operating model (AI Risk Review monthly, Steering Committee quarterly, Model Change Board ad-hoc); output is executive-ready document for legal and board sign-off; paths A/C
+- `prompts/model-evaluation-scorecard.md` — AI/LLM vendor evaluation scorecard: 5-dimension weighted framework (Capabilities 30%, Cost 25%, Compliance & Security 25%, Integration & DX 10%, Vendor Viability 10%), task-specific benchmark guidance (MMLU, HumanEval, ROUGE, IFEval per use case), full TCO model with Year 1 / Year 3 projections beyond token pricing (integration, FTE, migration), data residency and training policy audit (SOC2, ISO27001, GDPR, HIPAA, FedRAMP), vendor lock-in risk and open-source hedge assessment, final recommendation memo with caveats and next steps; paths A/C/D
+- `skills/ai-audit-reporter/` — Claude Code skill: AI usage audit report generator; collects evidence from Jira (keyword JQL scan), Confluence (policy and tool documentation), git log (API integrations, model references), and manual input; builds AI system inventory with GDPR risk level and EU AI Act tier per system; data flow matrix (data classification Level 1–5, cross-EU-border risk, training data opt-out flags); risk matrix across 5 dimensions (capability, privacy, compliance, security, governance); approval status audit with ✅/⚠️/❓/🔴 categories; output: executive summary + full report with immediate actions, 30-day and 90-day recommendations; supports `--quick`, `--inventory-only`, `reset` flags; paths A/C
+
+### Changed
+- `DEVELOPMENT_BACKLOG.md` — Sprint 7 (v2.1) marked complete; Sprint 8 (v2.2) confirmed as next
+
 ## [2.0.0] - 2026-10-15
 
 ### Added

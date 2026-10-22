@@ -205,7 +205,7 @@ Prompty dla ścieżki B (Job Search / etat) — narzędzia kariery oparte na dan
 
 ---
 
-### Sprint 7 (v2.1) — AI Governance & Policy — ~3h — zaplanowany na 2026-10-22 12:00
+### ✅ Sprint 7 (v2.1) — AI Governance & Policy — DONE 2026-10-22
 
 Prompty dla AI Product Managera i Consultanta — odpowiedź na rosnące zapotrzebowanie na AI governance w enterprise:
 
