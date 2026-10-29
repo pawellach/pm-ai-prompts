@@ -284,3 +284,123 @@ Never delete old entries. A new decision superseding an old one → new entry wi
 | "Can we start dev?" | Answer based on Gate C/D, list Q-* BLOCKERs |
 | "Generate questions for stakeholders" | Refresh `questions-email-draft.md`, show in response |
 | "Summarise status" | Show `project-status.md` + key blockers |
+| `/requirements-analyst gap-analysis` | Start gap analysis mode — compare existing system to requirements |
+
+---
+
+## Gap Analysis Mode — `/requirements-analyst gap-analysis`
+
+Compares an existing system (documentation, Confluence pages, code descriptions, or a running system description) against a set of requirements, and produces a structured gap register.
+
+**When to use:**
+- You have an existing system and new/updated requirements — you need to know what is missing, what is surplus, and what is wrong.
+- You are onboarding to a project and need to understand the delta between what was built and what was agreed.
+- You are preparing for a scope change discussion and need evidence of coverage or gaps.
+- You are doing a pre-project audit before writing a new SOW.
+
+---
+
+### Gap Analysis — Step 1: Provide sources
+
+I need two inputs:
+
+**Input A — Requirements source.** Provide one or more of:
+- A Jira ticket or epic (provide the ID, I will fetch it)
+- A document (SOW, BRD, PRD, Confluence page — drop the file or link)
+- A structured list of requirements you paste directly
+
+**Input B — System description.** Provide one or more of:
+- A Confluence page or technical documentation describing the existing system
+- A written description of what the current system does
+- A code summary or API spec
+- A list of existing implemented features
+
+If you only have one side (requirements without system description, or vice versa), tell me — I will work with what is available and flag the gaps in coverage.
+
+---
+
+### Gap Analysis — Step 2: Build the gap register
+
+I will read both sources and produce a gap register in the following format:
+
+```markdown
+# Gap Register — [Project / Feature name]
+Generated: YYYY-MM-DD
+Requirements source: [document / ticket reference]
+System source: [document / Confluence page / description reference]
+
+---
+
+| Gap ID | Requirement | REQ ID | System status | Gap type | Priority | Recommendation |
+|---|---|---|---|---|---|---|
+| GAP-001 | [Requirement text] | REQ-001 | Not implemented | MISSING | High | Implement before go-live |
+| GAP-002 | [Requirement text] | REQ-005 | Implemented differently | CONFLICT | High | Reconcile with business owner |
+| GAP-003 | [Feature in system] | — | Implemented, no matching requirement | EXCESS | Low | Document or deprecate |
+```
+
+**Gap types:**
+
+| Type | Definition |
+|---|---|
+| `MISSING` | Requirement exists but no corresponding implementation found in the system description |
+| `CONFLICT` | Requirement exists and is implemented, but the implementation contradicts the requirement |
+| `EXCESS` | Implementation exists but no matching requirement — undocumented feature or dead code |
+| `PARTIAL` | Requirement is partially covered — some elements implemented, others missing |
+
+**Priority:**
+
+| Priority | Meaning |
+|---|---|
+| High | Blocks acceptance, compliance, or core user journey |
+| Medium | Impacts quality, completeness, or secondary use cases |
+| Low | Cosmetic, undocumented, or low-risk divergence |
+
+---
+
+### Gap Analysis — Step 3: Summary
+
+After the register, I produce a one-page summary:
+
+```markdown
+## Gap Analysis Summary — [Project / Feature name]
+
+| Metric | Count |
+|---|---|
+| Requirements analysed | N |
+| System features analysed | N |
+| MISSING gaps | N |
+| CONFLICT gaps | N |
+| EXCESS items | N |
+| PARTIAL coverage | N |
+| High-priority gaps | N |
+
+**Overall coverage:** [%] of requirements have confirmed implementation.
+
+**Critical gaps (High priority MISSING or CONFLICT):**
+1. [GAP-001] — [1-sentence description]
+2. [GAP-002] — [1-sentence description]
+
+**Recommendation:** [1-2 sentences: what to do next — prioritise implementation, clarify conflicts, or schedule a gap review session]
+```
+
+---
+
+### Gap Analysis — Step 4: Next steps
+
+Based on the gap register, I will recommend:
+- Which gaps to resolve before the next milestone
+- Which conflicts need a decision from the business (will create Q-* entries)
+- Whether any EXCESS items should be formally accepted into requirements or removed
+- Whether a new change order is needed if the gap set is large
+
+If gaps produce questions that need stakeholder answers, I will generate Q-* entries and an email draft using the same format as standard requirements analysis mode.
+
+---
+
+### Gap Analysis — Important behaviour
+
+- Do not infer that a requirement is met just because the system description mentions something adjacent. Only mark as implemented if there is explicit evidence.
+- CONFLICT gaps must describe both the requirement and the actual behaviour — not just flag that they differ.
+- EXCESS items are not automatically problems. Some are features added correctly after requirements were written. Label them EXCESS and let the business decide.
+- If the system description is incomplete or ambiguous, note this explicitly rather than guessing at coverage.
+- A gap register without priorities is not actionable. Always assign priority.

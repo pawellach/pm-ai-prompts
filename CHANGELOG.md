@@ -3,7 +3,15 @@
 All notable changes to this project will be documented in this file.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — SemVer.
 
-## [Unreleased]
+## [2.2.0] - 2026-10-29
+
+### Added
+- `prompts/project-status-escalation.md` — escalation decision framework and communication toolkit for consulting delivery managers: trigger criteria matrix (budget overrun thresholds, schedule slip, scope creep, decision deadlock, risk materialisation), three-level escalation matrix (Project Sponsor / Steering Committee / Board-Executive) with audience profile, appropriate timing, and advance notice requirements, no-surprise rule with pre-conditions that must be met before formal escalation, ready-to-use email templates for all three levels, conversation preparation guide for the post-escalation meeting; paths A/C
+- `prompts/scope-creep-detector.md` — scope analysis and change order toolkit: red flag language and behavioural signals catalogue, four-category classification framework (In Scope / Misunderstanding / Gold-Plating / Genuine New Requirement) with detection signals and handling guidance per category, full change order template (description, business justification, in/out scope boundary, effort estimate by role, fee table, schedule impact, assumptions, dual approval), client communication drafting for each classification; paths A/C/D
+- `skills/requirements-analyst/` — gap-analysis mode upgrade: new `/requirements-analyst gap-analysis` command; compares existing system description (Confluence, docs, code summary) against requirements (Jira ticket, BRD, SOW) and produces a structured gap register with four gap types (MISSING / CONFLICT / EXCESS / PARTIAL), three-tier priority (High / Medium / Low), overall coverage percentage, critical-gap summary, and next-step recommendations; generates Q-* entries and stakeholder email draft for conflicts requiring business decisions; path A/B/C
+
+### Changed
+- `DEVELOPMENT_BACKLOG.md` — Sprint 8 (v2.2) marked complete; Sprint 9 (v2.3) confirmed as next
 
 ## [2.1.0] - 2026-10-22
 

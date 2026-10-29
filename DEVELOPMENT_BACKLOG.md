@@ -215,7 +215,7 @@ Prompty dla AI Product Managera i Consultanta — odpowiedź na rosnące zapotrz
 
 ---
 
-### Sprint 8 (v2.2) — Consulting Operations — ~4h — zaplanowany na 2026-10-29 12:00
+### ✅ Sprint 8 (v2.2) — Consulting Operations — DONE 2026-10-29
 
 Narzędzia dla consultanta zarządzającego projektami i scope'em:
 
