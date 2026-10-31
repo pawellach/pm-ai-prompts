@@ -16,7 +16,6 @@
 | v2.1 | 2026-10-22 | ai-governance-framework, model-evaluation-scorecard, ai-audit-reporter |
 | v2.2 | 2026-10-29 | project-status-escalation, scope-creep-detector, requirements-analyst upgrade (tryb gap-analysis) |
 | v2.2.1 | 2026-10-31 | ai-use-case-prioritizer, client-value-narrative-builder, confluence-program-dashboard, opportunity-solution-tree, assumptions-mapper, interview-toolkit, prioritize-features |
-| v2.3 | 2026-10-31 | data-product-spec, kpi-dashboard-designer, confluence-program-dashboard upgrade (ASCII viz) |
 | v2.3 | 2026-10-31 | data-product-spec, kpi-dashboard-designer, confluence-program-dashboard upgrade (ASCII health viz) |
 
 ---
