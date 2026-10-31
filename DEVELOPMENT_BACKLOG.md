@@ -256,3 +256,67 @@ Przepisanie architektury — skille stają się spójnym systemem komunikującym
 
 **Dokumentacja systemu:**
 - `docs/pm-ai-system-overview.md` — jak używać całego zestawu jako spójnego systemu PM AI: diagram przepływu danych między skillami, use cases per rola (PM / Analyst / Consultant / FDM), quick-start dla nowego użytkownika
+
+---
+
+## Analiza vs phuryn/pm-skills — strategia 15/10
+
+*Dodana 2026-10-31 po analizie repo phuryn/pm-skills (9 pluginów, 69 skilli, 42 komendy)*
+
+### Strategia różnicowania
+
+Huryn = generyczny, framework-first (Torres/Cagan/Savoia), dobry dla product managera w SaaS.
+Nasze repo = **tooling-native** (Jira/Linear/Confluence/SF), **enterprise-ready**, z warstwą kariery i consultingu. Strategia: brać najlepsze idee Huryna → przepisywać z integracjami narzędziowymi i kontekstem enterprise B2B SaaS.
+
+**Unikalna wartość której Huryn nie ma (chronić i wzmacniać):**
+- Salesforce layer (salesforce-newsletter-editor, salesforce-create-internal-user) — nikt tego nie ma
+- Jira/Linear/Confluence native skille z shared state (registry.json) — głębsza integracja
+- Career layer z negocjacjami i outreachem (4 narzędzia vs 2 u Huryna)
+- Consulting/FDM layer (SOW, change-impact, technical-discovery, client-status-pack)
+- Enterprise governance (ai-governance-framework, scope-creep-detector)
+
+---
+
+### Sprint 12 (v2.4) — Product Discovery Layer — ~3h — PARTIA 1 z analizy Huryna
+
+Huryn ma silny product discovery oparty na Torres. Nasze wersje będą lepsze przez output do Jiry.
+
+- [ ] **`skills/opportunity-solution-tree/`** — OST wg Torres: desired outcome → opportunities → solutions → experiments. Lepsze od Huryna: output jako Jira epic tree (gotowe komendy do wklejenia) + walidacja przez assumptions-first. *Huryn: 10/10 framework. Nasze: 15/10 bo Jira output*
+- [ ] **`skills/assumptions-mapper/`** — identyfikacja + priorytetyzacja założeń na macierzy (confidence × impact). Łączy identify-assumptions + prioritize-assumptions Huryna w jedno. Output: lista ticketów walidacyjnych do Jiry + rekomendacja jaką metodą testować (user interview / A/B / fake door)
+- [ ] **`skills/interview-toolkit/`** — script + prowadzenie + summarize w jednym flow. Huryn ma 3 oddzielne skille (interview-script, summarize-interview + commands/interview.md) — my robimy jeden zintegrowany. Output: notatki w formacie Confluence-ready + extracted opportunities do OST
+- [ ] **`skills/prioritize-features/`** — upgrade `prompts/roadmap-planner.md`: dodać RICE/ICE/WSJF/MoSCoW jako komendy + outcome-roadmap wariant (cel biznesowy → inicjatywy, nie feature lista). Huryn ma 2 oddzielne skille; nasze: jeden z trybami
+
+---
+
+### Sprint 13 (v2.6) — Product Strategy + Market Research Layer — ~4h — PARTIA 2
+
+- [ ] **`skills/product-strategy-builder/`** — łączy Huryna: product-vision + lean-canvas + value-proposition w jeden workflow. Input: opportunity + segment + constraints → Output: 1-page strategy doc + OKR seed. *Huryn ma 12 oddzielnych skilli; nasze: 1 zintegrowany z Jira OKR output*
+- [ ] **`skills/market-intelligence/`** — competitor-analysis + battlecard w jednym (Huryn ma 2 skille w 2 pluginach). Dodajemy: Salesforce-specific competitor positioning (CFO/Mid-market ERP landscape), output jako Confluence page z tabelą + CRM battlecard gotową do Salesforce
+- [ ] **`prompts/user-personas-jtbd.md`** — persony przez Jobs-to-be-Done (głębsze niż Huryna user-personas). Format: functional job + emotional job + social job + current solution + frustrations + desired outcomes. Kontekst enterprise B2B (nie consumer)
+- [ ] **`prompts/customer-journey-map.md`** — journey z punktami friction jako opportunity spaces (Teresa Torres linkage). Output: tabelka: stage → action → pain → opportunity → current solution. Lepsza od Huryna bo friction → OST-ready
+- [ ] **`prompts/market-sizing.md`** — TAM/SAM/SOM z bottom-up i top-down podejściem. Lepsze od Huryna: dodaje "Salesforce ecosystem sizing" jako gotowy przykład + walidacja przez analogie
+
+---
+
+### Sprint 14 (v2.7) — Execution Upgrades (Red-team, Pre-mortem, WWAS) — ~3h — PARTIA 3
+
+Huryn ma tu najsilniejsze skille. Nasze muszą być lepsze przez integrację z Jirą.
+
+- [ ] **`skills/strategy-red-team/`** — *to Huryn robi najlepiej*. Steelman + attack + rank failure modes (impact × likelihood × cheapness-to-test) + cheapest test + kill criteria. Nasze będzie lepsze przez: output jako Jira risk register + automatyczne linkowanie do assumption tickets z OST
+- [ ] **`skills/pre-mortem/`** — "wyobraź sobie że projekt się nie udał w X miesięcy" → dlaczego? → mitigation plan. Dodajemy: wariant dla AI product initiatives (model failed / data drift / adoption failure). Output: Jira epic z risk mitigation tasks
+- [ ] **`prompts/job-stories.md`** — JTBD job stories (When I... I want to... So I can...) jako alternatywa/uzupełnienie user-story-writer. Lepsza od Huryna: dodaje outcome metric dla każdego story + łączenie z OST opportunities
+- [ ] **`prompts/sprint-wwas.md`** — What Worked / What didn't / Action / System change — głębsza retrospektywa niż sprint-retrospective-facilitator. Dodajemy: output jako Jira follow-up tickety + Confluence team health history
+
+---
+
+### Backlog Huryn — nie robimy (uzasadnienie)
+
+| Skill Huryna | Dlaczego pomijamy |
+|---|---|
+| ansoff-matrix, pestle-analysis, porters-five-forces | Akademickie frameworks — rzadko używane w praktyce PM. Zamiast tego mamy business-case-writer z realnym ROI |
+| startup-canvas | Nie jesteśmy startupsem — lean-canvas też pomijamy |
+| sql-queries | Paweł nie pisze SQL operacyjnie |
+| ab-test-analysis | Data Analytics nie jest core workflow; mamy kpi-dashboard-designer w Sprint 9 |
+| draft-nda, privacy-policy | Niski priorytet; prawnik i tak review'uje |
+| growth-loops, gtm-motions, gtm-strategy | Robimy to przez market-intelligence + consulting layer; duplikat |
+| product-name | Za mało wartości vs koszt |
