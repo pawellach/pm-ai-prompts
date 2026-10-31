@@ -170,8 +170,11 @@ Skille Claude Code:
 5. `prompts/executive-presentation-builder.md`
 
 ### Sprint 3 (v1.7.0) — ~3h pracy — zaplanowany na 2026-09-30 12:00
-1. `career/salary-negotiation-script.md` — od oferty → strategia negocjacji, counter-offer, BATNA, walk-away (ścieżka B)
-2. `career/linkedin-outreach-writer.md` — cold/warm outreach do rekruterów; ton który nie brzmi jak spam (ścieżka B)
+
+> ⚠️ `salary-negotiation-script` i `linkedin-outreach-writer` wylądowały w Sprint 6 (v2.0, DONE 2026-10-15). Pozostałe 3 pozycje otwarte.
+
+1. ~~`career/salary-negotiation-script.md`~~ — przeniesione do Sprint 6 ✅
+2. ~~`career/linkedin-outreach-writer.md`~~ — przeniesione do Sprint 6 ✅
 3. `prompts/ai-use-case-prioritizer.md` — lista życzeń klienta → priorytetyzacja AI use case'ów: wartość vs effort, dane, ryzyko (ścieżka C)
 4. `prompts/client-value-narrative-builder.md` — praca techniczna → ROI dla executive; "3 systemy → czas decyzji −40%" (ścieżka D)
 5. `skills/confluence-program-dashboard/` — health dashboard programu z Jiry + Confluence: poziom portfolio, nie sprint (ścieżka A)
@@ -277,14 +280,20 @@ Nasze repo = **tooling-native** (Jira/Linear/Confluence/SF), **enterprise-ready*
 
 ---
 
-### Sprint 12 (v2.4) — Product Discovery Layer — ~3h — PARTIA 1 z analizy Huryna
+### Sprint 2.2.1 (v2.3) — Product Discovery + otwarte z Sprint 3 — ~5h — następny sprint
 
-Huryn ma silny product discovery oparty na Torres. Nasze wersje będą lepsze przez output do Jiry.
+*Łączy otwarte pozycje Sprint 3 (v1.7.0) z Product Discovery Layer (wcześniej Sprint 12). Razem 7 pozycji.*
 
-- [ ] **`skills/opportunity-solution-tree/`** — OST wg Torres: desired outcome → opportunities → solutions → experiments. Lepsze od Huryna: output jako Jira epic tree (gotowe komendy do wklejenia) + walidacja przez assumptions-first. *Huryn: 10/10 framework. Nasze: 15/10 bo Jira output*
-- [ ] **`skills/assumptions-mapper/`** — identyfikacja + priorytetyzacja założeń na macierzy (confidence × impact). Łączy identify-assumptions + prioritize-assumptions Huryna w jedno. Output: lista ticketów walidacyjnych do Jiry + rekomendacja jaką metodą testować (user interview / A/B / fake door)
-- [ ] **`skills/interview-toolkit/`** — script + prowadzenie + summarize w jednym flow. Huryn ma 3 oddzielne skille (interview-script, summarize-interview + commands/interview.md) — my robimy jeden zintegrowany. Output: notatki w formacie Confluence-ready + extracted opportunities do OST
-- [ ] **`skills/prioritize-features/`** — upgrade `prompts/roadmap-planner.md`: dodać RICE/ICE/WSJF/MoSCoW jako komendy + outcome-roadmap wariant (cel biznesowy → inicjatywy, nie feature lista). Huryn ma 2 oddzielne skille; nasze: jeden z trybami
+**Ze Sprint 3 — otwarte:**
+- [ ] **`prompts/ai-use-case-prioritizer.md`** — lista życzeń klienta → priorytetyzacja AI use case'ów: wartość vs effort, dane, ryzyko (ścieżka C)
+- [ ] **`prompts/client-value-narrative-builder.md`** — praca techniczna → ROI dla executive; "3 systemy → czas decyzji −40%" (ścieżka D)
+- [ ] **`skills/confluence-program-dashboard/`** — health dashboard programu z Jiry + Confluence: poziom portfolio, nie sprint (ścieżka A)
+
+**Product Discovery (Huryn → 15/10):**
+- [ ] **`skills/opportunity-solution-tree/`** — OST wg Torres: desired outcome → opportunities → solutions → experiments. Output jako Jira epic tree + walidacja przez assumptions-first. *Huryn: 10/10. Nasze: 15/10 bo Jira output*
+- [ ] **`skills/assumptions-mapper/`** — identyfikacja + priorytetyzacja założeń (confidence × impact). Łączy identify-assumptions + prioritize-assumptions Huryna w jedno. Output: tickety walidacyjne do Jiry + rekomendacja metody testu
+- [ ] **`skills/interview-toolkit/`** — script + prowadzenie + summarize w jednym flow. Huryn ma 3 oddzielne skille — my robimy jeden zintegrowany. Output: notatki Confluence-ready + extracted opportunities do OST
+- [ ] **`skills/prioritize-features/`** — upgrade `prompts/roadmap-planner.md`: RICE/ICE/WSJF/MoSCoW jako komendy + outcome-roadmap (cel biznesowy → inicjatywy, nie feature lista)
 
 ---
 
