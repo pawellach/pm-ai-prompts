@@ -16,6 +16,8 @@
 | v2.1 | 2026-10-22 | ai-governance-framework, model-evaluation-scorecard, ai-audit-reporter |
 | v2.2 | 2026-10-29 | project-status-escalation, scope-creep-detector, requirements-analyst upgrade (tryb gap-analysis) |
 | v2.2.1 | 2026-10-31 | ai-use-case-prioritizer, client-value-narrative-builder, confluence-program-dashboard, opportunity-solution-tree, assumptions-mapper, interview-toolkit, prioritize-features |
+| v2.3 | 2026-10-31 | data-product-spec, kpi-dashboard-designer, confluence-program-dashboard upgrade (ASCII viz) |
+| v2.3 | 2026-10-31 | data-product-spec, kpi-dashboard-designer, confluence-program-dashboard upgrade (ASCII health viz) |
 
 ---
 
@@ -33,11 +35,11 @@
 
 ---
 
-### Sprint 9 (v2.3) — zaplanowany 2026-11-05
+### ✅ Sprint 9 (v2.3) — DONE 2026-10-31
 
-- [ ] `prompts/data-product-spec.md` — spec na produkt danych: definicja, metryki jakości (freshness SLA, completeness, lineage), własność, downstream consumers
-- [ ] `prompts/kpi-dashboard-designer.md` — od pytania biznesowego do spec dashboardu: hierarchia KPI (north star → leading → lagging), układ widoku, brief dla BI developera
-- [ ] `skills/confluence-program-dashboard/` — **upgrade**: ASCII/text wizualizacja health metrics (progress bar, RAG traffic light, trend arrow ↑↓→)
+- ✅ `prompts/data-product-spec.md` — spec na produkt danych: definicja, metryki jakości (freshness SLA, completeness, lineage), własność, downstream consumers
+- ✅ `prompts/kpi-dashboard-designer.md` — od pytania biznesowego do spec dashboardu: hierarchia KPI (north star → leading → lagging), układ widoku, brief dla BI developera
+- ✅ `skills/confluence-program-dashboard/` — **upgrade**: ASCII/text wizualizacja health metrics (progress bar, RAG traffic light, trend arrow ↑↓→)
 
 ---
 
