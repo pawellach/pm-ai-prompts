@@ -73,6 +73,29 @@ Ready-to-use skill files for Claude Code (`.claude/skills/`).
 | `sprint-close-synthesizer/` | Sprint close report + planning seed from closed Jira sprint: velocity, completion rate, carryover analysis, unplanned work ratio, carry-forward recommendations (requires Atlassian plugin for live data) |
 | `stakeholder-update-generator/` | 3 audience-calibrated project updates (exec / team / client) from Jira + git log: tone, depth, and length calibrated per audience; consistent across versions |
 
+## Salesforce
+
+Salesforce-specific prompts and skills for PMs, admins, and delivery teams:
+
+| Artifact | Use case |
+|---|---|
+| `prompts/salesforce-newsletter-editor.md` | Internal Salesforce team newsletter and adoption communication |
+| `skills/sf-create-user/SKILL.md` | Create internal users from supplied data or a benchmark user; resolve FederationIdentifier conflicts; assign PSL → PSG → PS safely; verify the result |
+| `skills/salesforce-create-internal-user.md` | Legacy Salesforce user-provisioning skill kept for backwards compatibility |
+
+### Proposed `sf-pm-toolkit` repository
+
+An independent `sf-pm-toolkit` repository would be a good companion when Salesforce operational queries, admin runbooks, and PM-facing delivery tools grow beyond this prompt collection. Keep this repository focused on reusable prompts and skills; put executable SOQL, org metadata notes, query templates, and admin checklists in the companion repository. Start it with versioned, org-neutral query packs rather than copied org IDs or company-specific names.
+
+Suggested first skills for PM/Admin Salesforce (in addition to `sf-create-user`):
+
+1. `sf-org-health-audit` — read-only health snapshot for users, licenses, inactive accounts, automation failures, storage, and configuration drift.
+2. `sf-permission-access-review` — compare a user's access with a benchmark or role baseline; identify excessive, missing, and orphaned permissions without changing access.
+3. `sf-release-readiness-check` — pre-release checklist covering metadata dependencies, test evidence, deployment risks, data migration readiness, and rollback decisions.
+4. `sf-data-quality-triage` — profile duplicates, missing required fields, stale ownership, invalid relationships, and import risks; produce remediation backlog items.
+5. `sf-flow-automation-impact` — map Flows, Apex triggers, validation rules, and integrations affected by a requested change; surface order-of-execution and regression risks.
+6. `sf-topic-report-generator` — generate a decision-ready report on a requested Salesforce topic from supplied SOQL results and metadata, with scope, evidence, assumptions, risks, recommendations, and follow-up queries.
+
 ## Examples (`examples/`)
 
 Worked examples showing real input → output pairs for selected prompts.
