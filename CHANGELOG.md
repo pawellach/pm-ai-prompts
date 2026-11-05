@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — SemVer.
 
+## [2.3.0] - 2026-11-05
+
+### Added
+- `prompts/data-product-spec.md` — spec produktu danych: definicja, źródła, schema, metryki jakości (freshness SLA, completeness, accuracy), ownership, downstream consumers, lineage, security, open issues; paths A/C
+- `prompts/kpi-dashboard-designer.md` — od pytania biznesowego do spec dashboardu KPI: hierarchia north star → leading → lagging → guardrail, ASCII wireframe, brief dla dewelopera BI; paths A/C/D
+
+### Changed
+- `skills/confluence-program-dashboard/SKILL.md` — dodano sekcję ASCII/text health metrics: progress bar `[████░░]`, RAG `[G]/[A]/[R]`, trend arrows ↑→↓, blocker ⚠; instrukcja kiedy używać vs rich Confluence
+
+## [2.2.1] - 2026-10-31
+
+### Added
+- `prompts/ai-use-case-prioritizer.md` — priorytetyzacja AI use case'ów: matriz wartość × wykonalność × strategiczne dopasowanie, katalog typowych pułapek, output: ranked shortlist z ROI estimate i quick-win vs platform-play; paths A/C
+- `prompts/client-value-narrative-builder.md` — ROI narrative dla executive: biznesowy translator korzyści technicznych, przed/po framing, trzy wersje (slide one-pager, e-mail summary, board brief), anti-pattern: unikanie tech-jargon; paths A/C/D
+- `skills/assumptions-mapper/` — macierz confidence × impact dla założeń projektu → eksport do Jira ticketów (spike, validation experiment); mapuje lean startup uncertainty na backlog; path A
+- `skills/opportunity-solution-tree/` — OST wg Torres: outcome → opportunity → solution → experiment; generuje Jira epic tree z hierarchią; path A
+- `skills/interview-toolkit/` — JTBD-ready: script + conduct + summarize; guided interview z syntezą; path B
+- `skills/prioritize-features/` — multi-framework: RICE/ICE/WSJF/MoSCoW + outcome-roadmap; path A
+
 ## [2.2.0] - 2026-10-29
 
 ### Added
